@@ -1,0 +1,40 @@
+{
+    "cursos": [
+        {
+            "imagen": "img3.jpg",
+            "curso": "Marketing",
+            "informe": "informes",
+            "precio": 19.99
+        },
+        {
+            "imagen": "img5.jpg",
+            "curso": "E-Commerce",
+            "informe": "informes",
+            "precio": 19.99
+        },
+        {
+            "imagen": "img6.jpg",
+            "curso": "Ingeniería de Sistemas",
+            "informe": "informes",
+            "precio": 19.99
+        },
+        {
+            "imagen": "img7.jpg",
+            "curso": "Base de Datos",
+            "informe": "informes",
+            "precio": 19.99
+        },
+        {
+            "imagen": "img8.jpg",
+            "curso": "Programación Movil",
+            "informe": "informes",
+            "precio": 19.99
+        },
+        {
+            "imagen": "img9.jpg",
+            "curso": "Inteligencia Artificial",
+            "informe": "informes",
+            "precio": 19.99
+        }
+    ]
+}

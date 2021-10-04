@@ -1,0 +1,66 @@
+$hover-naranja: #F69312;
+header{
+    grid-area: header;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(33,61,60);
+    background: linear-gradient(138deg, rgba(33,61,60,1) 0%, rgba(108,149,147,0.9906337535014006) 64%, rgba(112,151,146,1) 80%, rgba(246,225,115,1) 100%);
+    padding: 30px 10%;
+    .logo{
+        width: 25%;
+        img{
+            width: 100px;
+        }
+    }
+    .navegacion{
+        width: 45%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .menu{
+            display: flex;
+            list-style: none;
+            margin-top: 10p;
+            li{
+                position: relative;
+                display: inline-block;
+                width: 150px;
+                padding-top: 2%;
+                &:hover{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                a{
+                    display: block;
+                    font-size: 1em;
+                    padding: 15px 20px;
+                    margin: 15px;
+                    cursor: pointer;
+                    transition: all 0.3s ease 0s;
+                    color:#fff;
+                    text-decoration: none;
+                    &:hover{
+                        color:$hover-naranja;
+                    }
+                }
+            }
+        }
+        .submenu{
+            position: absolute;
+            background: #000;
+            width: 120px;
+            visibility: hidden;
+            opacity: 0;
+            a{
+                display: block;
+                padding: 15px 20px;
+                color: #fff;
+                text-decoration: none;
+            }
+            
+        }
+    }
+}
