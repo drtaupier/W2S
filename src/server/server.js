@@ -20,6 +20,7 @@ app.use("/public", express.static("public"));
 //Rutas:
 app.use("/home", require("./routes/inicio"));
 app.use("/message", require("./routes/mensaje"));
+app.use("/intro", require("./routes/intro"));
 
 //Server
 const port = process.env.PORT || 3000;
