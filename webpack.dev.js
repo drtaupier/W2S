@@ -9,6 +9,7 @@ module.exports = {
 	context: path.join(__dirname, "src", "client"),
 	entry: {
 		index: "./js/index.js",
+		intro: "./js/intro.js",
 	},
 	output: {
 		path: path.join(__dirname, "dist"),
@@ -62,6 +63,11 @@ module.exports = {
 			filename: "index.html",
 			template: "./views/index.html",
 			chunks: ["index"],
+		}),
+		new HtmlWebpackPlugin({
+			filename: "intro.html",
+			template: "./views/intro.html",
+			chunks: ["intro"],
 		}),
 		new CleanWebpackPlugin({
 			//Simulate the removal of files
