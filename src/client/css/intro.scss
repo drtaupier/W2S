@@ -1,0 +1,154 @@
+@import "nav.scss";
+@import 'config.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+// Variables
+$circle-border: #f16e5f;
+$flamingo: #dc5a41;
+$licorice: #2c3545;
+$bg-footer:rgb(33,61,60);
+
+
+#wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "header header header header"
+    "art1 art1 art1 art1"
+    "art2 art2 art2 art2"
+    "footer footer footer footer";
+}
+
+header{
+    grid-area: header;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(33,61,60);
+    background: linear-gradient(138deg, rgba(33,61,60,1) 0%, rgba(108,149,147,0.9906337535014006) 64%, rgba(112,151,146,1) 80%, rgba(246,225,115,1) 100%);
+    #logo{
+        width: 25%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        img{
+            margin-left: 160px;
+            height: 65%;
+        }
+    }
+}
+
+#art1{
+    grid-area: art1;
+    height: 650px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    #intro{
+        width: 45%;
+    }
+    #sct1{
+        width: 65%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #circulo-marco{
+            height: 100%;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .circulo{
+                height: 500px;
+                width: 500px;
+                border-radius: 50%;
+                position: relative;
+                top: 5%;
+                border: 1.5px solid $circle-border;
+                .circle{
+                    width: 120px;
+                    height: 120px;
+                    border: none;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    padding: 2%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background: #fff;
+                    box-shadow: -1px 5px 21px -1px rgba(108,108,108,0.92);
+                    -webkit-box-shadow: -1px 7px 21px -1px rgba(108,108,108,0.92);
+                    -moz-box-shadow: -1px 7px 21px -1px rgba(108,108,108,0.92);
+                    img{
+                        height: 60%;
+                    }
+                    p{
+                        font-size: 0.9em;
+                        text-align: center;
+                        margin-top: 5px;
+                        color:#2b2c2e;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#art2{
+    grid-area: art2;
+    height: 680px;
+    width: 100vw;
+}
+
+
+footer{
+    grid-area: footer;
+    height: 10vh;
+    background:$bg-footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2, h3{
+        color: #fff;
+        font-size: 0.9em;
+        font-weight: normal;
+        line-height: 25px;
+    }
+}
+
+// Id's:
+
+#exito{
+    top: 38%;
+    left: 39%;
+}
+
+#secretos{
+    top: -10%;
+    left: 39%;
+}
+
+#store{
+    top: 38%;
+    left: 85%;
+}
+
+#cloud{
+    top: 38%;
+    left: -10%;
+}
+
+#aprendizaje{
+    top: 85%;
+    left: 39%;
+}

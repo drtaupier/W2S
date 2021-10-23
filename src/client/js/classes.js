@@ -44,7 +44,7 @@ class UI {
 
 class Intro {
   constructor(id, imagen, texto) {
-    const circuloMarco = document.getElementById('circulo-marco');
+    const circuloMarco = document.querySelector('.circulo');
     const element = document.createElement('div');
     element.classList.add('circle');
     element.setAttribute('id', id);
