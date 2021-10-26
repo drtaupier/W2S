@@ -1,12 +1,15 @@
 @import "nav.scss";
 @import 'config.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 // Variables
 $circle-border: #f16e5f;
 $flamingo: #dc5a41;
 $licorice: #2c3545;
 $bg-footer:rgb(33,61,60);
+$bg-white:#fff;
+$font-montserrat: 'Montserrat', sans-serif;
 
 
 #wrapper{
@@ -17,6 +20,7 @@ $bg-footer:rgb(33,61,60);
     "header header header header"
     "art1 art1 art1 art1"
     "art2 art2 art2 art2"
+    "art3 art3 art3 art3"
     "footer footer footer footer";
 }
 
@@ -50,14 +54,42 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    #intro{
-        width: 45%;
-    }
-    #sct1{
-        width: 65%;
+    background: $bg-white;
+    #show-results{
+        width: 50%;
         height: 100%;
         display: flex;
+        align-items: center;
         justify-content: center;
+        .results{
+            padding: 0 100px 0 160px;
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            h2{
+                img{
+                    height: 45px;
+                    margin-right: 20px;
+                }
+                font-size: 1.8em;
+                font-family: $font-montserrat;
+                margin-bottom: 20px;
+            }
+            p{
+                color: #2c3545;
+                font-size: 1.3em;
+                text-align: justify;
+                font-family: $font-montserrat;
+            }
+        }
+    }
+    #sct1{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
         align-items: center;
         #circulo-marco{
             height: 100%;
@@ -66,12 +98,11 @@ header{
             justify-content: center;
             align-items: center;
             .circulo{
-                height: 500px;
-                width: 500px;
+                height: 450px;
+                width: 450px;
                 border-radius: 50%;
                 position: relative;
-                top: 5%;
-                border: 1.5px solid $circle-border;
+                border: 10px solid $circle-border;
                 .circle{
                     width: 120px;
                     height: 120px;
@@ -84,12 +115,12 @@ header{
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    background: #fff;
+                    background: #F1F1F1;
                     box-shadow: -1px 5px 21px -1px rgba(108,108,108,0.92);
                     -webkit-box-shadow: -1px 7px 21px -1px rgba(108,108,108,0.92);
                     -moz-box-shadow: -1px 7px 21px -1px rgba(108,108,108,0.92);
                     img{
-                        height: 60%;
+                        height: 40%;
                     }
                     p{
                         font-size: 0.9em;
@@ -105,13 +136,97 @@ header{
 
 #art2{
     grid-area: art2;
-    height: 680px;
     width: 100vw;
+    height: 680px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .nosotrosImg{
+        width: 50%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 60%;
+        }
+    }
+    .nosotrosHistoria{
+        width: 50%;
+        height: 90%;
+        background: $bg-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 70px;
+        h2{
+            font-family: $font-montserrat;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #2c3545;
+        }
+        p{
+            color: #2c3545;
+            font-size: 1.2em;
+            line-height: 30px;
+            text-align: justify;
+
+        }
+    }
+}
+
+#art3{
+    width: 100vw;
+    height: 670px;
+    background: $bg-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    #teachingHistory{
+        width: 50%;
+        height: 90%;
+        padding: 0 70px 0 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        h2{
+            font-size: 1.8em;
+            font-family: $font-montserrat;
+            margin-bottom: 15px;
+            color: #2c3545;
+        }
+        p{
+            color: #2c3545;
+            font-family: $font-montserrat;
+            line-height: 25px;
+            font-size: 1.2em;
+            text-align: justify;
+        }
+        a{
+            color: blue;
+            margin-left: -20px;
+        }
+    }
+    #teachingImage{
+        width: 50%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 90%;
+        }
+    }
 }
 
 
 footer{
     grid-area: footer;
+    width: 100vw;
     height: 10vh;
     background:$bg-footer;
     display: flex;
@@ -129,26 +244,32 @@ footer{
 // Id's:
 
 #exito{
-    top: 38%;
+    top: 35%;
     left: 39%;
 }
 
 #secretos{
-    top: -10%;
+    top: -14%;
     left: 39%;
 }
 
 #store{
-    top: 38%;
+    top: 35%;
     left: 85%;
 }
 
 #cloud{
-    top: 38%;
-    left: -10%;
+    top: 35%;
+    left: -15%;
 }
 
 #aprendizaje{
     top: 85%;
     left: 39%;
+}
+
+.results>a{
+    color: blue;
+    font-size: 1.2em;
+    margin-left: -20px;
 }
