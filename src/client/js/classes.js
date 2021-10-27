@@ -1,3 +1,5 @@
+const { result } = require('underscore');
+
 class UI {
   footer() {
     const today = new Date();
@@ -39,6 +41,23 @@ class UI {
     info.innerHTML += `<a href="#">${curso.informe}</a>`;
     info.innerHTML += `<p>$ ${curso.precio}</p>`;
     element.appendChild(info);
+  }
+
+  info(img, area, texto, link) {
+    const showResults = document.getElementById('show-results');
+    const element = document.createElement('div');
+    element.classList.add('results');
+    element.innerHTML = `<h2><img src="public/icons/${img}">${area}</h2>`;
+    element.innerHTML += `<p>${texto}</p>`;
+    element.innerHTML += `<a href="#">Learn more..</a>`;
+    showResults.appendChild(element);
+  }
+
+  removeInfo() {
+    const result = document.querySelector('.results');
+    if (result) {
+      result.remove();
+    }
   }
 }
 

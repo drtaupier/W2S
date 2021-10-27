@@ -83,6 +83,10 @@ header{
                 text-align: justify;
                 font-family: $font-montserrat;
             }
+            a{
+                color: blue;
+                font-size: 1.2em;
+            }
         }
     }
     #sct1{
@@ -243,29 +247,34 @@ footer{
 
 // Id's:
 
-#exito{
+#centro{ //ubicado
     top: 35%;
+    left: 39%;
+}
+
+#emprendedores{ //ubicado
+    top:-12%;
     left: 39%;
 }
 
 #secretos{
-    top: -14%;
-    left: 39%;
+    top: 70%;
+    left: 76%;
 }
 
-#store{
-    top: 35%;
-    left: 85%;
+#empresas{
+    top: 12%;
+    left: 80%;
 }
 
-#cloud{
-    top: 35%;
-    left: -15%;
+#comunidad{
+    top: 12%;
+    left: -8%;
 }
 
-#aprendizaje{
-    top: 85%;
-    left: 39%;
+#elearning{
+    top: 70%;
+    left: 0%;
 }
 
 .results>a{
