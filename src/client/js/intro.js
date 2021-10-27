@@ -26,7 +26,6 @@ window.onload = function () {
     circle[i].addEventListener('click', (e) => {
       switch (circle[i]) {
         case circle[0]:
-          ui.removeInfo();
           break;
         case circle[1]:
           ui.removeInfo();
