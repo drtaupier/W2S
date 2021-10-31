@@ -1,12 +1,15 @@
-const { result } = require('underscore');
-
 class UI {
-  footer() {
+  footer(socialMedia, url) {
     const today = new Date();
     const year = today.getFullYear();
     const footer = document.querySelector('footer');
     footer.innerHTML = `<h2>Way-2-Success</h2>`;
     footer.innerHTML += `<h3>&copy; Derechos Reservados - ${year}</h3>`;
+    footer.innerHTML += `<ul>`;
+    // footer.innerHTML += `<li><a href="http://www.facebook.com"><img src="public/icons/fb.png" target="_blank"></a></li>`;
+    // footer.innerHTML += `<li><a href="http://www.twitter.com"><img src="public/icons/twitter.png" target="_blank"></a></li>`;
+    // footer.innerHTML += `<li><a href="http://www.instagram.com"><img src="public/icons/instagram.png" target="_blank"></a></li>`;
+    // footer.innerHTML += `</ul>`;
   }
 
   stickyNav() {
@@ -49,7 +52,7 @@ class UI {
     element.classList.add('results');
     element.innerHTML = `<h2><img src="public/icons/${img}">${area}</h2>`;
     element.innerHTML += `<p>${texto}</p>`;
-    element.innerHTML += `<a href="#">Learn more..</a>`;
+    element.innerHTML += `<a href="${link}">Learn more..</a>`;
     showResults.appendChild(element);
   }
 
@@ -58,6 +61,24 @@ class UI {
     if (result) {
       result.remove();
     }
+  }
+
+  animaciones(article, seccion, animacion) {
+    const ident = document.getElementById(article);
+    const element = document.querySelector(`.${seccion}`);
+    window.addEventListener('scroll', function () {
+      let positionTop = ident.getBoundingClientRect().top;
+      let positionBottom = ident.getBoundingClientRect().bottom;
+      // console.log('Parte Superior: ', positionTop);
+      // console.log('Parte Inferior: ', positionBottom);
+      //Tamaño de la pantalla
+      let screenSize = window.innerHeight / 1.1;
+      // console.log('tamaño de pantalla: ', screenSize);
+
+      if (positionTop < screenSize) {
+        element.classList.add(`${animacion}`);
+      }
+    });
   }
 }
 

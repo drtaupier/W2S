@@ -3,6 +3,8 @@ const ui = new UI();
 import '../css/intro.scss';
 
 window.onload = function () {
+  const t0 = performance.now();
+  //circulos
   const centro = new Intro('centro', 'head.png', '');
   const emprendedores = new Intro(
     'emprendedores',
@@ -21,7 +23,7 @@ window.onload = function () {
     'Profesor.png',
     'Desarrollo E-learning'
   );
-
+  //Información de cada circulo
   for (let i = 0; i < circle.length; i++) {
     circle[i].addEventListener('click', (e) => {
       switch (circle[i]) {
@@ -30,7 +32,7 @@ window.onload = function () {
         case circle[1]:
           ui.removeInfo();
           ui.info(
-            'Profesor.png',
+            'Alumno.png',
             'Emprendedores',
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut ab molestiae, corrupti nesciunt eaque debitis.',
             '#'
@@ -75,9 +77,16 @@ window.onload = function () {
       }
     });
   }
-
+  //Animaciones
+  ui.animaciones('art2', 'nosotrosHistoriaText', 'animateIzq');
+  ui.animaciones('art2', 'nosotrosImg', 'imagAnimada');
+  ui.animaciones('art3', 'teachingHistory-content', 'imagAnimada');
+  ui.animaciones('art3', 'teachingImage-content', 'animateIzq');
+  //Footer
   ui.footer();
+  //Rendimiento de la página:
+  const t1 = performance.now();
+  console.log('This code take: ', `${t1 - t0} miliseconds`);
 };
 
 const circle = document.getElementsByClassName('circle');
-console.log(circle);

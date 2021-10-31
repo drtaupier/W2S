@@ -68,6 +68,7 @@ header{
             display: flex;
             justify-content: center;
             flex-direction: column;
+            animation: textAnimate 0.4s ease-in;
             h2{
                 img{
                     height: 45px;
@@ -79,13 +80,14 @@ header{
             }
             p{
                 color: #2c3545;
-                font-size: 1.3em;
+                font-size: 1.1em;
                 text-align: justify;
                 font-family: $font-montserrat;
+                line-height: 30px;
             }
             a{
                 color: blue;
-                font-size: 1.2em;
+                font-size: 1.1em;
             }
         }
     }
@@ -102,6 +104,7 @@ header{
             justify-content: center;
             align-items: center;
             .circulo{
+                animation: circleAnimate 2s ease;
                 height: 450px;
                 width: 450px;
                 border-radius: 50%;
@@ -159,24 +162,40 @@ header{
     .nosotrosHistoria{
         width: 50%;
         height: 90%;
-        background: $bg-white;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        flex-direction: column;
-        padding: 0 70px;
-        h2{
-            font-family: $font-montserrat;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            color: #2c3545;
-        }
-        p{
-            color: #2c3545;
-            font-size: 1.2em;
-            line-height: 30px;
-            text-align: justify;
-
+        padding-right: 5%;
+        .nosotrosHistoriaText{
+            padding: 0 70px;
+            background: $bg-white;
+            width: 95%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            border-radius: 5px;
+            box-shadow: -1px 5px 29px -10px rgba(108,108,108,0.92);
+            -webkit-box-shadow: -1px 5px 29px -10px rgba(108,108,108,0.92);
+            -moz-box-shadow: -1px 5px 29px -10px rgba(108,108,108,0.92);
+            h2{
+                img{
+                    height: 40px;
+                }
+                font-family: $font-montserrat;
+                font-size: 1.8em;
+                margin-bottom: 15px;
+                color: #2c3545;
+            }
+            p{
+                color: #2c3545;
+                font-size: 1.1em;
+                line-height: 30px;
+                text-align: justify;
+                font-family: $font-montserrat;
+    
+            }
         }
     }
 }
@@ -197,22 +216,35 @@ header{
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        h2{
-            font-size: 1.8em;
-            font-family: $font-montserrat;
-            margin-bottom: 15px;
-            color: #2c3545;
-        }
-        p{
-            color: #2c3545;
-            font-family: $font-montserrat;
-            line-height: 25px;
-            font-size: 1.2em;
-            text-align: justify;
-        }
-        a{
-            color: blue;
-            margin-left: -20px;
+        .teachingHistory-content{
+            width: 90%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            h2{
+                img{
+                    height: 45px;
+                }
+                font-size: 1.8em;
+                font-family: $font-montserrat;
+                margin-bottom: 15px;
+                color: #2c3545;
+            }
+            p{
+                color: #2c3545;
+                font-family: $font-montserrat;
+                line-height: 30px;
+                font-size: 1.1em;
+                font-family: $font-montserrat;
+                text-align: justify;
+            }
+            a{
+                color: blue;
+                margin-left: -20px;
+                font-size: 1.1em;
+            }
         }
     }
     #teachingImage{
@@ -221,6 +253,13 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
+        .teachingImage-content{
+            width: 90%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         img{
             height: 90%;
         }
@@ -281,4 +320,46 @@ footer{
     color: blue;
     font-size: 1.2em;
     margin-left: -20px;
+}
+
+.animateIzq{
+    animation: imgAnimate 1s ease-in;
+}
+
+.imagAnimada{
+    animation: imgAnimateIzq 1s ease-in;
+}
+
+@keyframes circleAnimate{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes imgAnimateIzq{
+    0%{
+        opacity: 0.2;
+        transform: translateX((-100px));
+    }
+    100%{
+        opacity: 1;
+        transform: translateX((0));
+    }
+}
+
+@keyframes imgAnimate{
+    from{
+        opacity: 0.2;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
