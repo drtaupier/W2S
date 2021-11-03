@@ -9,7 +9,8 @@
     "build": "npx tsc",
     "build-prod": "rimraf dist && webpack --config webpack.prod.js",
     "build-dev": "rimraf dist && webpack --config webpack.dev.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server/server"
   },
   "keywords": [],
   "author": "David Rivera Taupier",
@@ -23,7 +24,6 @@
     "express": "^4.17.1",
     "mongoose": "^5.13.8",
     "mongoose-unique-validator": "^2.0.3",
-    "nodemon": "^2.0.12",
     "rimraf": "^3.0.2",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
@@ -44,6 +44,7 @@
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.2.0",
     "node-sass": "^6.0.1",
+    "nodemon": "^2.0.14",
     "postcss": "^8.3.9",
     "postcss-loader": "^6.1.1",
     "prettier": "^2.4.1",
